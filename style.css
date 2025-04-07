@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top right, #ffdee9, #b5fffc);
+  font-family: 'Courier New', cursive;
+  color: #c0392b;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  padding: 100px 20px;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+.delay-2 {
+  animation-delay: 2s;
+}
+.delay-3 {
+  animation-delay: 3s;
+}
+.delay-4 {
+  animation-delay: 4s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.next-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.next-button:hover {
+  background-color: #c0392b;
+}
+
+/* Heart Animation */
+.hearts {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: float 5s infinite ease-in-out;
+  clip-path: polygon(
+    50% 0%,
+    100% 35%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    0% 35%
+  );
+}
+
+.heart.delay {
+  animation-delay: 1s;
+  left: 30px;
+}
+
+.heart.delay2 {
+  animation-delay: 2s;
+  left: -30px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px) scale(1.5);
+    opacity: 0;
+  }
+.next-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.next-button:hover {
+  background-color: #c0392b;
+}
+}
+
